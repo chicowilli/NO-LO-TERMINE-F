@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePedia - Nueva Película</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='nuevo.css') }}">
+</head>
+<body>
+
+
+    <div class="encabezado">
+        <h1>Nueva Película</h1>
+        <p>
+            <a href="/cine">Inicio</a>
+            <a href="/cierre">Cerrar Sesión</a>
+        </p>
+    </div>
+
+
+    <form action="/cine/crear" method="POST">
+        <div class="grupo">
+            <label>Nombre de Peli:</label>
+            <input type="text" name="nombre_pelicula" required>
+        </div>
+
+        <div class="grupo">
+            <label>Director:</label>
+            <input type="text" name="director" required>
+        </div>
+
+        <div class="grupo">
+            <label>Fecha Estreno:</label>
+            <input type="date" name="fecha_estreno" required>
+        </div>
+
+        <div class="grupo">
+            <label>Sinopsis:</label>
+            <textarea name="sinopsis" required></textarea>
+        </div>
+
+        <button type="submit">Guardar Película</button>
+    </form>
+
+</body>
+</html>

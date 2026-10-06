@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePedia - Login y Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>CinePedia</h1>
+
+    <div class="caja">
+        <div class="contorno">
+            <h2>Registro</h2>
+            <form action="/registro" method="POST">
+                <div class="grupo1">
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" required>
+                </div>
+                <div class="grupo2">
+                    <label>Apellido:</label>
+                    <input type="text" name="apellido" required>
+                </div>
+                <div class="grupo3">
+                    <label>E-mail:</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="grupo4">
+                    <label>Contraseña:</label>
+                    <input type="password" name="password" required>
+                </div>
+                <div class="grupo5">
+                    <label>Conf. Contraseña:</label>
+                    <input type="password" name="conf_password" required>
+                </div>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+
+        <div class="inicio">
+            <h2>Inicio de Sesión</h2>
+            <form action="/login" method="POST">
+                <div class="grupo1">
+                    <label>E-mail:</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="grupo2">
+                    <label>Contraseña:</label>
+                    <input type="password" name="password" required>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
